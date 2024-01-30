@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+</head>
+<body>
+    
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3">My Forex Tracker</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sideBarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input type="text" class="form-control form-control-dark w-100" placeholder="Search" aria-label="Search">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3">Sign out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">
+                                <i data-feather="home"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page">
+                                <i data-feather="bar-chart"></i>
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page">
+                                <i data-feather="calendar"></i>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page">
+                                <i data-feather="credit-card"></i>
+                                My Transactions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page">
+                                <i data-feather="bell"></i>
+                                My Alerts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="container">
+                    <canvas id="myChart" class="my-4 w-100" width="1539" height="650"></canvas>
+                </div>
+                <h2>PHP to other currencies convertible with Bangko Sentral</h2>
+                <div class="table-responsive small">
+                    <table class="table table-striped table-sm">
+                       <thead>
+                        <tr>
+                          <th>Country</th>
+                          <th>Unit</th>
+                          <th>Symbol</th>
+                          <th>Euro Equivalent</th>
+                          <th>U.S. Dollar Equivalent</th>
+                          <th>Phil. Peso Equivalent</th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNITED STATES</td>
+                                <td>DOLLAR</td>
+                                <td>USD</td>
+                                <td class="number">0.946880</td>
+                                <td class="number">1.000000</td>
+                                <td class="number">56.8360</td>
+                              </tr>
+                              <tr>
+                                <td>JAPAN</td>
+                                <td>YEN</td>
+                                <td>JPY</td>
+                                <td class="number">0.006332</td>
+                                <td class="number">0.006687</td>
+                                <td class="number">0.3801</td>
+                              </tr>
+                              <tr>
+                                <td>UNITED KINGDOM</td>
+                                <td>POUND</td>
+                                <td>GBP</td>
+                                <td class="number">1.156425</td>
+                                <td class="number">1.221300</td>
+                                <td class="number">69.4138</td>
+                              </tr>
+                              <tr>
+                                <td>HONGKONG</td>
+                                <td>DOLLAR</td>
+                                <td>HKD</td>
+                                <td class="number">0.121125</td>
+                                <td class="number">0.127920	</td>
+                                <td class="number">7.2705</td>
+                              </tr>
+                              <tr>
+                              <td>Switzerland</td>
+                                <td>Franc</td>
+                                <td>CHF</td>
+                                <td class="number">1.052323</td>
+                                <td class="number">1.111358</td>
+                                <td class="number">63.1651</td>
+                             </tr>
+                            <tr>
+                                <td>Canada</td>
+                                <td>Dollar</td>
+                                <td>CAD</td>
+                                <td class="number">0.695980</td>
+                                <td class="number">0.735024</td>
+                                <td class="number">41.7758</td>
+                            </tr>
+                            <tr>
+                                <td>Singapore</td>
+                                <td>Dollar</td>
+                                <td>SGD</td>
+                                <td class="number">0.692164</td>
+                                <td class="number">0.730994</td>
+                                <td class="number">41.5468</td>
+                            </tr>
+                            <tr>
+                                <td>Australia</td>
+                                <td>Dollar</td>
+                                <td>AUD</td>
+                                <td class="number">0.600038</td>
+                                <td class="number">0.633700</td>
+                                <td class="number">36.0170</td>
+                            </tr>
+                            <tr>
+                                <td>Bahrain</td>
+                                <td>Dinar*</td>
+                                <td>BHD</td>
+                                <td class="number">2.516960</td>
+                                <td class="number">2.658161</td>
+                                <td class="number">151.0792</td>
+                            </tr>
+                            <tr>
+                                <td>Kuwait</td>
+                                <td>Dinar</td>
+                                <td>KWD</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Saudi Arabia</td>
+                                <td>Riyal</td>
+                                <td>SAR</td>
+                                <td class="number">0.252441</td>
+                                <td class="number">0.266603</td>
+                                <td class="number">15.1526</td>
+                            </tr>
+                                <tr>
+                                <td>Brunei</td>
+                                <td>Dollar</td>
+                                <td>BND</td>
+                                <td class="number">0.689643</td>
+                                <td class="number">0.728332</td>
+                                <td class="number">41.3955</td>
+                            </tr>
+                            <tr>
+                                <td>Indonesia</td>
+                                <td>Rupiah</td>
+                                <td>IDR</td>
+                                <td class="number">0.000061</td>
+                                <td class="number">0.000064</td>
+                                <td class="number">0.0036</td>
+                            </tr>
+                            <tr>
+                                    <td>Thailand</td>
+                                    <td>Baht****</td>
+                                    <td>THB</td>
+                                <td class="number">0.026128</td>
+                                <td class="number">0.027594</td>
+                                <td class="number">1.5683</td>
+                            </tr>
+                            <tr>
+                                <td>United Arab Emirates</td>
+                                <td>Dirham</td>
+                                <td>AED</td>
+                                <td class="number">0.257823</td>
+                                <td class="number">0.272287</td>
+                                <td class="number">15.4757</td>
+                            </tr>
+                            <tr>
+                                <td>European Monetary Union</td>
+                                <td>Euro</td>
+                                <td>EUR</td>
+                                <td class="number">1.000000</td>
+                                <td class="number">1.056100</td>
+                                <td class="number">60.0245</td>
+                            </tr>
+                            <tr>
+                                <td>Korea</td>
+                                <td>Won</td>
+                                <td>KRW</td>
+                                <td class="number">0.000704</td>
+                                <td class="number">0.000743</td>
+                                <td class="number">0.0422</td>
+                            </tr>
+                            <tr>
+                                <td>China</td>
+                                <td>Yuan**</td>
+                                <td>CNY</td>
+                                <td class="number">0.129518</td>
+                                <td class="number">0.136784</td>
+                                <td class="number">7.7743</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="feather.min.js"></script>
+    <script src="Chart.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
